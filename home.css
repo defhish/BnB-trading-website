@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(36, 36, 36);
+    color: white;
+    display: flex; /* Change display to flex */
+}
+
+.sidebar {
+    width: 200px;
+    background-color: rgb(34, 34, 46);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow-y: auto; 
+}
+
+.main-content {
+    padding: 20px;
+    margin-left: 200px;
+    overflow-y: auto; 
+    flex-grow: 1;
+}
+.sidebar-header {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.sidebar-nav {
+    width: 100%;
+}
+
+.sidebar-nav a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.sidebar-nav a:hover {
+    background-color: rgb(52, 52, 52);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(34, 34, 46);
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.header-item {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.header-button {
+    background-color: #3a8bfa;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.header-button:hover {
+    background-color: #357ae8;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section {
+    background-color: rgb(34, 34, 46);
+    padding: 20px;
+    border-radius: 5px;
+    flex-direction: row;
+}
+
+.coming-soon {
+    background-color: #ff9800;
+    padding: 10px;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+}
+
+.heading {
+    background-color: rgb(36, 36, 36);
+    height: 50px;
+    width: 85vw;
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.image {
+    text-align: right;
+}
+
+.box {
+    background-color: rgb(47, 44, 44);
+    height: 100px;
+    width: 200px;
+    border-radius: 20px;
+    margin-right: 20px; /* Add some spacing between the boxes */
+}
+
+.box-container {
+    display: flex;
+}

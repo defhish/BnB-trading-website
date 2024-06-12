@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Market</title>
+    <link rel="stylesheet" href="market.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h4>STOCK MARKET</h4>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="home.html">Home</a>
+                <a href="#">PrepZone</a>
+                <a href="#">Market</a>
+                <a href="#">Portfolio</a>
+                <a href="#">Social</a>
+            </nav>
+        </div>
+        <div class="main-content">
+            <div class="stock-list">
+                <div class="stock-item">
+                    <div class="stock-icon">
+                        <img src="mazagon.png">
+                    </div>
+                    <div class="stock-details">
+                        <div class="stock-name">Mazagon Dock Shipbuilders Ltd</div>
+                        <div class="stock-price">₹3200.00</div>
+                    </div>
+                </div>
+                <div class="stock-item">
+                    <div class="stock-icon">
+                        <img src="kalyan.png">
+                    </div>
+                    <div class="stock-details">
+                        <div class="stock-name">Kalyan Jewellers</div>
+                        <div class="stock-price">₹414.00</div>
+                    </div>
+                </div>
+                <div class="stock-item">
+                    <div class="stock-icon">
+                        <img src="kalyan.png">
+                    </div>
+                    <div class="stock-details">
+                        <div class="stock-name">RECL</div>
+                        <div class="stock-price">₹514</div>
+                    </div>
+                </div>
+                <div class="stock-item">
+                    <div class="stock-icon">
+                        <img src="kalyan.png">
+                    </div>
+                    <div class="stock-details">
+                        <div class="stock-name">Coal India</div>
+                        <div class="stock-price">₹401.00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="stock-info">
+            <div class="info-header">Stock Information</div>
+            <div class="info-body">
+                Select a stock to view information.
+            </div>
+            <div class="info-image">
+                <img class="info-stock-image" src="">
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const stockItems = document.querySelectorAll('.stock-item');
+            stockItems.forEach(stockItem => {
+                stockItem.addEventListener('click', function() {
+                    stockItems.forEach(item => item.classList.remove('active'));
+                    this.classList.add('active');
+                    const stockName = this.querySelector('.stock-name').textContent;
+                    const stockPrice = this.querySelector('.stock-price').textContent;
+                    const stockImageSrc = this.querySelector('.stock-icon img').getAttribute('src');
+                    const stockInfoBody = document.querySelector('.info-body');
+                    const stockInfoImage = document.querySelector('.info-image img');
+                    stockInfoBody.textContent = `Name: ${stockName}, Price: ${stockPrice}`;
+                    stockInfoImage.src = stockImageSrc;
+                });
+            });
+        });
+    </script>
+</body>
+</html>
